@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backtesting Simulation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Backtesting Simulation</h1>
+    <p>Starting with $1000. Test your strategy using historical price data!</p>
+
+    <label for="strategy">Choose Strategy:</label>
+    <select id="strategy">
+      <option value="buyLowSellHigh">Buy Low, Sell High</option>
+      <option value="randomTrade">Random Trade</option>
+    </select>
+    <button onclick="startBacktest()">Start Backtest</button>
+
+    <h2>Results</h2>
+    <p>Final Balance: $<span id="finalBalance">1000</span></p>
+    <p>Profit/Loss: $<span id="profitLoss">0</span></p>
+
+    <canvas id="chart" width="600" height="400"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
